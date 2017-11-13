@@ -13,7 +13,6 @@ namespace Golf
             Swing s = new Swing(45,56);
 
             s.printDistance();
-            //test
         }
     }
 }
