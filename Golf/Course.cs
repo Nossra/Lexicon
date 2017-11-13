@@ -26,20 +26,20 @@ namespace Golf
             Console.WriteLine("Distance to cup: " + distanceToCup);
         }
 
-        public void newSwing()
+        public void NewSwing()
         {
             Console.WriteLine("Enter angle:");
             int angle = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter velocity of swing:");
             int velocity = Convert.ToInt32(Console.ReadLine());
             Swing s = new Swing(angle, velocity);
-            this.startingDistance += s.calculateDistance(angle);
-            distanceToCup -= s.calculateDistance(angle);
-            Console.Write("your ball traveled " + s.calculateDistance(angle) + " units.");
+            this.startingDistance += s.CalculateDistance(angle);
+            distanceToCup -= s.CalculateDistance(angle);
+            Console.Write("your ball traveled " + s.CalculateDistance(angle) + " units.");
             swingAmount.Add(s);
         }
 
-        public bool amountOfSwings()
+        public bool AmountOfSwings()
         {
             if (swingAmount.Count >= 5)
             {
@@ -50,12 +50,12 @@ namespace Golf
             else return false;
         }
 
-        public void unitsToCup()
+        public void UnitsToCup()
         {
-            if (!overshotCup()) Console.WriteLine(" Distance to cup: " + distanceToCup);
+            if (!OvershotCup()) Console.WriteLine(" Distance to cup: " + distanceToCup);
         }
 
-        public bool overshotCup()
+        public bool OvershotCup()
         {
             if (distanceToCup < (this.TOLERANCE * -1))
             {

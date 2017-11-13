@@ -14,10 +14,10 @@ namespace Golf
 
             while (c.Playing)
             {
-                while (!c.amountOfSwings())
+                while (!c.AmountOfSwings())
                 {
-                    c.newSwing();
-                    c.unitsToCup();
+                    c.NewSwing();
+                    c.UnitsToCup();
                     
                     if (c.DistanceToCup <= c.TOLERANCE && c.DistanceToCup >= (c.TOLERANCE * -1))
                     {

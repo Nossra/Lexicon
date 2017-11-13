@@ -18,15 +18,15 @@ namespace Golf
             this.angle = angle;
         }
 
-        public double angleInRadians(int angle)
+        public double AngleInRadians(int angle)
         {
             double angleInRadians = (Math.PI / 180) * angle;
             return angleInRadians;
         }
 
-        public int calculateDistance(int angle)
+        public int CalculateDistance(int angle)
         {
-            int distance = Convert.ToInt32(Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * angleInRadians(angle)));
+            int distance = Convert.ToInt32(Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * AngleInRadians(angle)));
             return distance;
         }
 
