@@ -5,3 +5,10 @@ C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.csprojResolveAssemblyRe
 C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.csproj.CoreCompileInputs.cache
 C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.exe
 C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.pdb
+C:\Users\Deltagare\Documents\GitHub\Lexicon\Golf\obj\Debug\Golf.csprojResolveAssemblyReference.cache
+C:\Users\Deltagare\Documents\GitHub\Lexicon\Golf\obj\Debug\Golf.csproj.CoreCompileInputs.cache
+C:\Users\Deltagare\Documents\GitHub\Lexicon\Golf\obj\Debug\Golf.exe
+C:\Users\Deltagare\Documents\GitHub\Lexicon\Golf\obj\Debug\Golf.pdb
+C:\Users\Deltagare\Documents\GitHub\Lexicon\Golf\bin\Debug\Golf.exe.config
+C:\Users\Deltagare\Documents\GitHub\Lexicon\Golf\bin\Debug\Golf.exe
+C:\Users\Deltagare\Documents\GitHub\Lexicon\Golf\bin\Debug\Golf.pdb

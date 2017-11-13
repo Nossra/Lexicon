@@ -11,17 +11,12 @@ namespace Golf
         int velocity;
         int angle;
         readonly double GRAVITY = 9.8;
-        int countSwings = 0;
 
         public Swing(int angle, int velocity)
         {
             this.velocity = velocity;
             this.angle = angle;
-            countSwings++;
         }
-
-        public int Velocity { get => velocity; set => velocity = value; }
-        public int Angle { get => angle; set => angle = value; }
 
         public double angleInRadians(int angle)
         {
@@ -29,20 +24,16 @@ namespace Golf
             return angleInRadians;
         }
 
-        public double calculateDistance(int angle)
+        public int calculateDistance(int angle)
         {
-            double distance = Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * angleInRadians(angle));
+            int distance = Convert.ToInt32(Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * angleInRadians(angle)));
             return distance;
         }
 
-        public void printDistance()
-        {
-            Console.WriteLine("The ball traveled " + calculateDistance(angle) + " meters!");
-        }
+        //GETTERS AND SETTERS
+        public int Velocity { get => velocity; set => velocity = value; }
+        public int Angle { get => angle; set => angle = value; }
 
-        public bool swingCount()
-        {
-            int counter;
-        }
+      
     }
 }

@@ -10,16 +10,23 @@ namespace Golf
     {
         static void Main(string[] args)
         {
-            
-            Swing s = new Swing(45,56);
+            bool playing = true;
+            Course c = new Course();
 
-
-            s.printDistance();
-        }
-
-        public bool amountOfSwings()
-        {
-
+            while (playing)
+            {
+                while (!c.amountOfSwings())
+                {
+                    c.newSwing();
+                    c.unitsToCup();
+                    if (c.DistanceToCup <= 10 && c.DistanceToCup >= 1)
+                    {
+                        Console.WriteLine("YOU HIT THE CUP!");
+                        playing = false;
+                        break;
+                    } 
+                }
+            }    
         }
     }
 }
