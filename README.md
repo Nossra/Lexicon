@@ -1,2 +1,2 @@
-# Lexicon
-Assignments and exercises from Lexicon
+# Lexicon Golf
+Golf assignment
