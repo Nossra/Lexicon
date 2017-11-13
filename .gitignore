@@ -1,3 +1,4 @@
 bin/
 *.lock
 vs/*
+Golf/App.config
