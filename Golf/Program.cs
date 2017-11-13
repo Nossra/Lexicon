@@ -10,20 +10,20 @@ namespace Golf
     {
         static void Main(string[] args)
         {
-            bool playing = true;
             Course c = new Course();
 
-            while (playing)
+            while (c.Playing)
             {
                 while (!c.amountOfSwings())
                 {
                     c.newSwing();
                     c.unitsToCup();
-                    if (c.DistanceToCup <= 10 && c.DistanceToCup >= 1)
+                    
+                    if (c.DistanceToCup <= c.TOLERANCE && c.DistanceToCup >= (c.TOLERANCE * -1))
                     {
                         Console.WriteLine("YOU HIT THE CUP!");
-                        playing = false;
-                        break;
+                        c.Playing = false;
+                        break;                        
                     } 
                 }
             }    

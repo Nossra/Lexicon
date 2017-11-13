@@ -11,10 +11,14 @@ namespace Golf
         Random rnd = new Random();
         int distanceToCup;
         int startingDistance = 0;
+        bool playing = true;
+        readonly int tolerance = 3;
         List<Swing> swingAmount = new List<Swing>();
 
         public int DistanceToCup { get => distanceToCup;}
         public int StartingDistance { get => startingDistance;}
+        public bool Playing { get => playing; set => playing = value; }
+        public int TOLERANCE => tolerance;
 
         public Course()
         {
@@ -40,6 +44,7 @@ namespace Golf
             if (swingAmount.Count >= 5)
             {
                 Console.WriteLine("\nMax amount of swings reached! You didn't reach the cup!");
+                this.playing = false;
                 return true;
             }
             else return false;
@@ -52,7 +57,7 @@ namespace Golf
 
         public bool overshotCup()
         {
-            if (distanceToCup < 1)
+            if (distanceToCup < (this.TOLERANCE * -1))
             {
                 distanceToCup = (distanceToCup * -1);
                 Console.WriteLine("\nYOU OVERSHOT THE CUP!\nDistance left: " + distanceToCup);
