@@ -8,29 +8,29 @@ namespace Golf
 {
     class Swing
     {
-        int velocity;
-        int angle;
-        readonly double GRAVITY = 9.8;
+        private int _velocity;
+        private int _angle;
+        private readonly double GRAVITY = 9.8;
 
         public Swing(int angle, int velocity)
         {
-            this.velocity = velocity;
-            this.angle = angle;
+            this._velocity = velocity;
+            this._angle = angle;
         }
 
         //GETTERS AND SETTERS
-        public int Velocity { get => velocity; set => velocity = value; }
-        public int Angle { get => angle; set => angle = value; }
+        public int Velocity { get => _velocity; set => _velocity = value; }
+        public int Angle { get => _angle; set => _angle = value; }
 
         public double AngleInRadians()
         {
-            double angleInRadians = (Math.PI / 180) * angle;
+            double angleInRadians = (Math.PI / 180) * _angle;
             return angleInRadians;
         }
 
         public int CalculateDistance()
         {
-            int distance = Convert.ToInt32(Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * AngleInRadians()));
+            int distance = Convert.ToInt32(Math.Pow(_velocity, 2) / GRAVITY * Math.Sin(2 * AngleInRadians()));
             return distance;
         }      
     }

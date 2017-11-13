@@ -8,31 +8,22 @@ namespace Golf
 {
     class Player
     {
-        public int input;
-        string name;
+        private string _name;
 
         public Player(string name)
         {
-            this.name = name;
+            this._name = name;
+        }
+       
+        public string Name { get => _name; set => _name = value; }
+
+        public int setInput(int input)
+        {
+            if ()          
         }
 
-        public string Name { get => name; set => name = value; }
+
+         
         
-        public int Input
-        {
-            get => input;
-            set => input = value; }
-
-
-        /*    try
-             {
-                 input = Convert.ToInt32(Console.ReadLine());
-             }
-             catch (Exception e)
-             {
-                 Console.WriteLine("That wasn't a number. Try again:");
-             }
-         }
-     }*/
     }
 }
