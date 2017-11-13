@@ -18,22 +18,20 @@ namespace Golf
             this.angle = angle;
         }
 
-        public double AngleInRadians(int angle)
+        //GETTERS AND SETTERS
+        public int Velocity { get => velocity; set => velocity = value; }
+        public int Angle { get => angle; set => angle = value; }
+
+        public double AngleInRadians()
         {
             double angleInRadians = (Math.PI / 180) * angle;
             return angleInRadians;
         }
 
-        public int CalculateDistance(int angle)
+        public int CalculateDistance()
         {
-            int distance = Convert.ToInt32(Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * AngleInRadians(angle)));
+            int distance = Convert.ToInt32(Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * AngleInRadians()));
             return distance;
-        }
-
-        //GETTERS AND SETTERS
-        public int Velocity { get => velocity; set => velocity = value; }
-        public int Angle { get => angle; set => angle = value; }
-
-      
+        }      
     }
 }
