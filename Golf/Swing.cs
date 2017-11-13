@@ -11,11 +11,13 @@ namespace Golf
         int velocity;
         int angle;
         readonly double GRAVITY = 9.8;
+        int countSwings = 0;
 
         public Swing(int angle, int velocity)
         {
             this.velocity = velocity;
             this.angle = angle;
+            countSwings++;
         }
 
         public int Velocity { get => velocity; set => velocity = value; }
@@ -36,6 +38,11 @@ namespace Golf
         public void printDistance()
         {
             Console.WriteLine("The ball traveled " + calculateDistance(angle) + " meters!");
+        }
+
+        public bool swingCount()
+        {
+            int counter;
         }
     }
 }

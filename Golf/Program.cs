@@ -10,9 +10,16 @@ namespace Golf
     {
         static void Main(string[] args)
         {
+            
             Swing s = new Swing(45,56);
 
+
             s.printDistance();
+        }
+
+        public bool amountOfSwings()
+        {
+
         }
     }
 }
