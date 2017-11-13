@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf", "Golf\Golf.csproj", "{F230FBF8-42B9-4F85-AA3A-57FBF65C56CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F230FBF8-42B9-4F85-AA3A-57FBF65C56CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F230FBF8-42B9-4F85-AA3A-57FBF65C56CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F230FBF8-42B9-4F85-AA3A-57FBF65C56CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F230FBF8-42B9-4F85-AA3A-57FBF65C56CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C02665C-EE13-4A97-AB79-C2D17EDD0553}
+	EndGlobalSection
+EndGlobal

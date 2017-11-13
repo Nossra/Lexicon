@@ -1,0 +1,7 @@
+C:\Users\Deltagare\source\repos\Golf\Golf\bin\Debug\Golf.exe.config
+C:\Users\Deltagare\source\repos\Golf\Golf\bin\Debug\Golf.exe
+C:\Users\Deltagare\source\repos\Golf\Golf\bin\Debug\Golf.pdb
+C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.csprojResolveAssemblyReference.cache
+C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.csproj.CoreCompileInputs.cache
+C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.exe
+C:\Users\Deltagare\source\repos\Golf\Golf\obj\Debug\Golf.pdb
