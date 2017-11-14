@@ -9,6 +9,7 @@ namespace Golf
     class Player
     {
         private string _name;
+        private int _input;
 
         public Player(string name)
         {
@@ -16,14 +17,5 @@ namespace Golf
         }
        
         public string Name { get => _name; set => _name = value; }
-
-        public int setInput(int input)
-        {
-            if ()          
-        }
-
-
-         
-        
     }
 }

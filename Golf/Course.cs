@@ -45,10 +45,10 @@ namespace Golf
         public void NewSwing()
         {
             Console.WriteLine("\nEnter angle:");
-            int angle = Player.Input;
+            int angle = Convert.ToInt32(Console.ReadLine());
             
             Console.WriteLine("\nEnter velocity of swing:");
-            int velocity = Player.Input;
+            int velocity = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             Swing s = new Swing(angle, velocity);
             

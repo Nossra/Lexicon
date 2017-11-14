@@ -19,3 +19,10 @@ C:\Users\Martin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.csprojResolveA
 C:\Users\Martin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.csproj.CoreCompileInputs.cache
 C:\Users\Martin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.exe
 C:\Users\Martin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.pdb
+C:\Users\N0ssLin\Documents\GitHub\Lexicon-Golf\Golf\bin\Debug\Golf.exe.config
+C:\Users\N0ssLin\Documents\GitHub\Lexicon-Golf\Golf\bin\Debug\Golf.exe
+C:\Users\N0ssLin\Documents\GitHub\Lexicon-Golf\Golf\bin\Debug\Golf.pdb
+C:\Users\N0ssLin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.csprojResolveAssemblyReference.cache
+C:\Users\N0ssLin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.csproj.CoreCompileInputs.cache
+C:\Users\N0ssLin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.exe
+C:\Users\N0ssLin\Documents\GitHub\Lexicon-Golf\Golf\obj\Debug\Golf.pdb
