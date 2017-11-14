@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Golf
 {
@@ -13,11 +10,10 @@ namespace Golf
         private int _startingDistance = 0;
         private int _courseLength;
         private bool _playing = true;
-        private readonly int _TOLERANCE = 2;
+        private const int _TOLERANCE = 2;
         private Player _player;
         private List<Swing> swings = new List<Swing>();
-
-
+        
         // GETTERS AND SETTERS
         public int DistanceToCup { get => _distanceToCup;}
 
@@ -28,8 +24,9 @@ namespace Golf
         public int TOLERANCE { get => _TOLERANCE; }
 
         public int CourseLength { get => _courseLength; }
-        internal Player Player { get => _player; set => _player = value; }
 
+        internal Player Player { get => _player; set => _player = value; }
+        
         // END OF GETTERS AND SETTERS
 
         // CONSTRUCTOR

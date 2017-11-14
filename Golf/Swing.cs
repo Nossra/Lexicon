@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Golf
 {
@@ -17,7 +13,7 @@ namespace Golf
             this._velocity = velocity;
             this._angle = angle;
         }
-
+        
         //GETTERS AND SETTERS
         public int Velocity { get => _velocity; set => _velocity = value; }
         public int Angle { get => _angle; set => _angle = value; }
