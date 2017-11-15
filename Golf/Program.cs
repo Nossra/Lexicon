@@ -11,31 +11,27 @@ namespace Golf
             Player player = new Player(name);
             
             Course c = new Course(player);
-            
-            while (c.Playing)
+
+            while (!c.AmountOfSwings())
             {
-                while (!c.AmountOfSwings())
+                try
                 {
+                    c.OutOfBounds();
                     c.NewSwing();
-                    if (!c.OutOfBounds())
+                    c.UnitsToCup();
+                    if (c.DistanceToCup <= c.TOLERANCE && c.DistanceToCup >= (c.TOLERANCE * -1))
                     {
-                        c.UnitsToCup();
-                        if (c.DistanceToCup <= c.TOLERANCE && c.DistanceToCup >= (c.TOLERANCE * -1))
-                        {
-                            Console.WriteLine("YOU HIT THE CUP!\n");
-                            c.printLog();
-                            c.Playing = false;
-                            break;
-                        }
-                    }
-                    else
-                    {
+                        Console.WriteLine("YOU HIT THE CUP!\n");
                         c.printLog();
-                        c.Playing = false;
                         break;
                     }
                 }
-            }    
+                catch (OutOfBoundsException e)
+                {
+                    c.printLog();
+                    break;
+                }
+            }
         }
     }
 }

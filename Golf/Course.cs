@@ -9,24 +9,23 @@ namespace Golf
         private int _distanceToCup;
         private int _startingDistance = 0;
         private int _courseLength;
-        private bool _playing = true;
         private const int _TOLERANCE = 2;
         private Player _player;
-        private List<Swing> swings = new List<Swing>();
+        private List<Swing> swings;
         
         // GETTERS AND SETTERS
-        public int DistanceToCup { get => _distanceToCup;}
+        public int DistanceToCup { get => _distanceToCup; set => _distanceToCup = value; }
 
         public int StartingDistance { get => _startingDistance;}
-
-        public bool Playing { get => _playing; set => _playing = value; }
 
         public int TOLERANCE { get => _TOLERANCE; }
 
         public int CourseLength { get => _courseLength; }
 
-        internal Player Player { get => _player; set => _player = value; }
-        
+        public Player Player { get => _player; set => _player = value; }
+
+        public List<Swing> Swings { get => swings; }
+
         // END OF GETTERS AND SETTERS
 
         // CONSTRUCTOR
@@ -36,12 +35,12 @@ namespace Golf
             _player = p;
             this._distanceToCup = rnd.Next(300) + 501;
             this._courseLength = rnd.Next(200) + 800;
-            Console.WriteLine("Distance to cup: " + _distanceToCup + ". Course length: " + _courseLength);
+            Console.WriteLine("Distance to cup: " + DistanceToCup + ". Course length: " + CourseLength);
         }
 
         public void NewSwing()
         {
-            Console.WriteLine("\nEnter angle:");
+            Console.WriteLine("\nSwing: " + (swings.Count +1) + ". Enter angle:");
             int angle = Convert.ToInt32(Console.ReadLine());
             
             Console.WriteLine("\nEnter velocity of swing:");
@@ -59,9 +58,8 @@ namespace Golf
         {
             if (swings.Count >= 5)
             {
-                Console.WriteLine("\nMax amount of swings reached! You didn't reach the cup!");
-                this.printLog();
-                this._playing = false;
+                Console.WriteLine("\nMax amount of swings reached! You didn't reach the cup!\n\n -- G A M E  O V E R --\n");
+                printLog();
                 return true;
             }
             else return false;
@@ -69,39 +67,36 @@ namespace Golf
 
         public void UnitsToCup()
         {
-            if (!OvershotCup()) Console.WriteLine(" Distance to cup: " + _distanceToCup);
+            if (!OvershotCup()) Console.WriteLine(" Distance to cup: " + DistanceToCup);
         }
 
         public bool OvershotCup()
         {
-            if (_distanceToCup < (this.TOLERANCE * -1))
+            if (DistanceToCup < (this.TOLERANCE * -1))
             {
-                _distanceToCup = (_distanceToCup * -1);
-                Console.WriteLine("\nYOU OVERSHOT THE CUP!\nDistance left: " + _distanceToCup);
+                DistanceToCup = (DistanceToCup * -1);
+                Console.WriteLine("\nYOU OVERSHOT THE CUP!\nDistance left: " + DistanceToCup);
                 return true;
             }
             return false;
         }
 
-        public bool OutOfBounds()
+        public void OutOfBounds()
         {
             int i = 0;
             foreach (Swing s in swings)
             {
-                if (s.CalculateDistance() >= _courseLength)
+                if (s.CalculateDistance() >= CourseLength)
                 {
-                    Console.WriteLine(" You shot the ball way off course.\n -- G A M E   O V E R --");
-                    this.Playing = false;
-                    return true;
+                    throw new OutOfBoundsException();
                 }
                 i++;
             }
-            return false;
         }
 
         public void printLog()
         {
-            Console.WriteLine(_player.Name + " took " + swings.Count + " swings on this course.");
+            Console.WriteLine(Player.Name + " took " + Swings.Count + " swings on this course.");
             int i = 0;
             foreach (Swing swing in swings) 
             {
