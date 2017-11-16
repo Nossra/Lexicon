@@ -1,2 +1,2 @@
-# Lexicon Golf
-Golf assignment
+# Golf
+Simple golf game
