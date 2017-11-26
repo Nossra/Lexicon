@@ -10,7 +10,7 @@ namespace Golf
         private int _startingDistance = 0;
         private int _courseLength;
         private const int _TOLERANCE = 2;
-        private Player _player;
+        private Player player;
         private List<Swing> swings;
         
         // GETTERS AND SETTERS
@@ -22,7 +22,7 @@ namespace Golf
 
         public int CourseLength { get => _courseLength; }
 
-        public Player Player { get => _player; set => _player = value; }
+        public Player Player { get => player; set => player = value; }
 
         public List<Swing> Swings { get => swings; }
 
@@ -32,19 +32,39 @@ namespace Golf
         public Course(Player p)
         {
             swings = new List<Swing>();
-            _player = p;
+            player = p;
             this._distanceToCup = rnd.Next(300) + 501;
             this._courseLength = rnd.Next(200) + 800;
             Console.WriteLine("Distance to cup: " + DistanceToCup + ". Course length: " + CourseLength);
         }
 
+        public int AngleCheck()
+        {
+            int angle = player.getInt();
+
+            while (true)
+            {
+                if (angle >= 90)
+                {
+                    Console.WriteLine("You cant hit your ball backwards! Pick another angle:");
+                    AngleCheck();
+                }
+                else
+                {
+                    angle = player.getInt();
+                    break;
+                }
+            }
+            return angle;
+        }       
+
         public void NewSwing()
         {
             Console.WriteLine("\nSwing: " + (swings.Count +1) + ". Enter angle:");
-            int angle = Convert.ToInt32(Console.ReadLine());
+            int angle = AngleCheck();
             
             Console.WriteLine("\nEnter velocity of swing:");
-            int velocity = Convert.ToInt32(Console.ReadLine());
+            int velocity = player.getInt();
             Console.WriteLine();
             Swing s = new Swing(angle, velocity);
             
